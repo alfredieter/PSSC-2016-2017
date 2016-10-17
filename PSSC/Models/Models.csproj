@@ -40,10 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalog.cs" />
     <Compile Include="Curs.cs" />
-    <Compile Include="Departament.cs" />
+    <Compile Include="Decanat.cs" />
     <Compile Include="Facultate.cs" />
+    <Compile Include="Nota.cs" />
     <Compile Include="Profesor.cs" />
+    <Compile Include="profesorCurs.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="Universitate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

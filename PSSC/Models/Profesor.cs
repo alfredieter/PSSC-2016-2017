@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    class Profesor:Departament
+    class Profesor
     {
         public string numeProfesor;
         private string salariu;

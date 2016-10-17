@@ -10,7 +10,6 @@ namespace Models
     {
         public string numeUniversitate;
         private string rector;
-        //remove or alter this class, then implement your models.  
     }
 }
  
