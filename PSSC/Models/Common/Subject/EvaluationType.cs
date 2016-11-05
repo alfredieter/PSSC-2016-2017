@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models
+namespace Models.Common.Subject
 {
-    class Universitate
+    public enum EvaluationType
     {
-        public string numeUniversitate;
-        private string rector;
+        Distributed,
+        Exam
     }
 }
- 
