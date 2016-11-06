@@ -10,6 +10,7 @@ namespace Models.Contexts.Deanship
 {
     class StudyYearFactory
     {
+        //se poate crea StudyYear, lasand StudyYearFactory sa adauga in lista definedSubjects
         private List<DefinableSubject> definedSubjects;
 
 

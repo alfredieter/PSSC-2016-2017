@@ -7,6 +7,7 @@ using Models.Generics;
 
 namespace Models.Contexts.Professor
 {
+    //pentru modificari. Este implementata in Subjects.cs
     public interface IProfessorRepository
     {
         void AddExamGrade(PlainText subjectName, RegistrationNumber regNumber, Grade grade);

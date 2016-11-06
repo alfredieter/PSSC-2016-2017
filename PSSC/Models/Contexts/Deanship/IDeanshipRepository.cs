@@ -7,9 +7,9 @@ using Models.Generics;
 
 namespace Models.Contexts.Deanship
 {
+    //pentru modificari asupra "bazei de date"
     public interface IDeanshipRepository<T>
     {
-
         void defineSubject(T entity);
         void eraseSubject(T entity);
         void enrollStudentToSubject(Models.Generics.PlainText subjectName, Common.Student.Student student);

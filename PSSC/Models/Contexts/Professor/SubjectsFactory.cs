@@ -9,6 +9,7 @@ namespace Models.Contexts.Professor
 {
     class SubjectsFactory
     {
+        //verifica lista sa nu fie nula
         public Subjects createSubject(List<TeachingSubject> subjects)
         {
             Contract.Requires(subjects != null, "subjects");

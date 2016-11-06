@@ -10,8 +10,6 @@ using System.Data.SqlClient;
 
 namespace Models.Contexts.Deanship
 {
-
-
     //Aggregate Root
     public class StudyYear: IDeanshipRepository<DefinableSubject>
     {
@@ -23,35 +21,6 @@ namespace Models.Contexts.Deanship
             _definedSubjects = definedSubjects;
         }
 
-        /*
-        public void DefineSubject(PlainText subjectName, Credits credits, Dictionary<Common.Student.Student, ViewableSituation> enrolledStudents, 
-            EvaluationType type, Common.Professor.Professor professor, Proportion activity)
-        {
-            _definedSubjects.Add(new DefinableSubject(subjectName, credits, enrolledStudents, type, professor, activity));
-        }
-
-        public void DefineSubject(PlainText subjectName, Credits credits, Dictionary<Common.Student.Student, ViewableSituation> enrolledStudents,
-            EvaluationType type, Common.Professor.Professor professor)
-        {
-            _definedSubjects.Add(new DefinableSubject(subjectName, credits, enrolledStudents, type, professor));
-        }
-        
-        public void EnrollStudentToSubject(PlainText subjectName, Common.Student.Student student)
-        {
-            _definedSubjects.Find(d => d.Name == subjectName).EnrollStudent(student);
-        }
-        
-        public Grade CalculateStudentAverage(PlainText subjectName, RegistrationNumber regNumber)
-        {
-            return _definedSubjects.Find(d => d.Name == subjectName).GetStudentAverage(regNumber);
-            
-        }
-        
-        public ViewableSituation GetStudentSituation(PlainText subjectName, RegistrationNumber regNumber)
-        {
-            return _definedSubjects.Find(d => d.Name == subjectName).GetStudentSituation(regNumber);
-        }
-        */
         public void PublishGradeReports(IReportPublisher publisher)
         {
 
@@ -90,7 +59,6 @@ namespace Models.Contexts.Deanship
             int credits = 0;
             foreach (DefinableSubject df in _definedSubjects)
             {
-                //if (df._enrolledStudents.First(d => d.Key.RegNumber == regNumber)) ;
                 for (int i = 0; i < df._enrolledStudents.Count(); i++)
                 {
                     if (df._enrolledStudents.ElementAt(i).Key.RegNumber == regNumber)
